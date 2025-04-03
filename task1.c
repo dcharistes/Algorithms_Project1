@@ -26,5 +26,4 @@ int arithm_sequence2(int a, int d, int n){
         term += d; // Προσθήκη της διαφοράς στον τρέχοντα όρο
     }
     return term; // Επιστροφή του τελικού όρου
-    //return a + (n - 1) * d;
 }
