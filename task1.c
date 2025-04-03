@@ -19,6 +19,8 @@ int main(){
     return 0; 
 }
 
+ewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
 
 //non-recursive
 int arithm_sequence2(int a, int d, int n){
