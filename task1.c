@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int arithm_sequence1(int n, int a, int d);
+int arithm_sequence1(int a, int d, int n);
 int arithm_sequence2(int a, int d, int n);
 
 int main(){
@@ -14,7 +14,7 @@ int main(){
     printf("Enter the term number (n): \n");
     scanf("%d", &n);
 
-    printf("The %dth term of the sequence using the recursion is: %d\n", n, arithm_sequence1(n, a, d));
+    printf("The %dth term of the sequence using the recursion is: %d\n", n, arithm_sequence1(a, d, n));
     printf("The %dth term of the sequence using the non-recursion is: %d\n", n, arithm_sequence2( a, d, n));
 
     return 0; 
@@ -25,7 +25,7 @@ int arithm_sequence1(int a, int d, int n) {
     if (n == 1) {
         return a;
     } else {
-        return d + arithm_sequence1( a, d, n-1);
+        return arithm_sequence1( a, d, n-1) + d;
     }
 }
 
