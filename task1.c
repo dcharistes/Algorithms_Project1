@@ -21,5 +21,10 @@ int main(){
 
 //non-recursive
 int arithm_sequence2(int a, int d, int n){
-    return a + (n - 1) * d;
+    int term = a; // Αρχικοποίηση του πρώτου όρου
+    for (int i = 1; i < n; i++) {
+        term += d; // Προσθήκη της διαφοράς στον τρέχοντα όρο
+    }
+    return term; // Επιστροφή του τελικού όρου
+    //return a + (n - 1) * d;
 }
