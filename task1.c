@@ -19,15 +19,6 @@ int main(){
     return 0; 
 }
 
-//recursive
-/*int arithm_sequence1(int a, int d, int n){
-    if (n == 1) {
-        return a;
-    } else {
-        return d + arithm_sequence1(n - 1, a, d);
-    }
-}*/
-
 
 //non-recursive
 int arithm_sequence2(int a, int d, int n){
