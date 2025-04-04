@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <math.h>
+#include <time.h>
 
 int min_distance(int* arr, int N, int *dmin);
 int min_distance_impr(int* arr, int N, int *dmin);
@@ -25,13 +26,14 @@ int main() {
     dmin_value = INT_MAX;
     min_distance(arr, N, &dmin_value);
     printf("dmin = %d\n", dmin_value);
+    dmin_value = INT_MAX;
     min_distance_impr(arr, N, &dmin_value);
     printf("dmin_impr = %d\n", dmin_value);
 
     free(arr);
     return 0;
 }
-
+//time complexity O(n^2)
 int min_distance(int* arr, int N, int* dmin){
     int i, j;
     for (i = 0; i < N; i++){
@@ -45,6 +47,7 @@ int min_distance(int* arr, int N, int* dmin){
 
 int min_distance_opt(int* arr, int N, int* dmin){
     int i, j;
+    //qsort the array?. the second for loop won't be needed 
     for (i = 0; i < N; i++){
         for(j = i + 1; j < N; j++){
             int current_dmin = abs(arr[i]-arr[j]); //just cleaner implementation of the min_distance. not an actual improve
