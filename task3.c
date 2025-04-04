@@ -50,6 +50,7 @@ int compare(const void* a, const void* b) {
     return (*(int*)a - *(int*)b);
 }
 
+//time complexity O(nlogn)
 int min_distance_opt(int* arr, int N, int* dmin){
     int i, j;
     qsort(arr, N, sizeof(int), compare); //qsort the array?. the second for loop won't be needed 
