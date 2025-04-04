@@ -45,15 +45,18 @@ int min_distance(int* arr, int N, int* dmin){
     return *dmin;
 }
 
+// Comparison function
+int compare(const void* a, const void* b) {
+    return (*(int*)a - *(int*)b);
+}
+
 int min_distance_opt(int* arr, int N, int* dmin){
     int i, j;
-    //qsort the array?. the second for loop won't be needed 
+    qsort(arr, N, sizeof(int), compare); //qsort the array?. the second for loop won't be needed 
     for (i = 0; i < N; i++){
-        for(j = i + 1; j < N; j++){
-            int current_dmin = abs(arr[i]-arr[j]); //just cleaner implementation of the min_distance. not an actual improve
+            int current_dmin = abs(arr[i]-arr[i+1]); //just cleaner implementation of the min_distance. not an actual improve
             if (current_dmin < *dmin)
                 *dmin = current_dmin;
-        }
     }
     return *dmin;
 }
