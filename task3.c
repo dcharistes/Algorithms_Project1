@@ -5,7 +5,7 @@
 #include <time.h>
 
 int min_distance(int* arr, int N, int *dmin);
-int min_distance_impr(int* arr, int N, int *dmin);
+int min_distance_opt(int* arr, int N, int *dmin);
 int main() {
     int i, N;
     int dmin_value;
@@ -27,7 +27,7 @@ int main() {
     min_distance(arr, N, &dmin_value);
     printf("dmin = %d\n", dmin_value);
     dmin_value = INT_MAX;
-    min_distance_impr(arr, N, &dmin_value);
+    min_distance_opt(arr, N, &dmin_value);
     printf("dmin_impr = %d\n", dmin_value);
 
     free(arr);
