@@ -7,8 +7,9 @@ void sum_primes2(int n);
 
 // Main function
 int main() {
-    int a = 11;
-    int sum = 0;
+    int a, sum;
+    printf("Enter the number: ");
+    scanf("%d", &a);
     sum = sum_primes1(a);
     printf("sum = %d - recursive\n", sum);
     sum_primes2(a);
