@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int arithm_sequence1(int a, int d, int n);
 int arithm_sequence2(int a, int d, int n);
@@ -7,9 +6,9 @@ int arithm_sequence2(int a, int d, int n);
 int main(){
     int a, d, n;
 
-    printf("Enter the first number of arithmetic progression (a): \n");
+    printf("Enter the first number of arithmetic sequence (a): \n");
     scanf("%d", &a);
-    printf("Enter the common difference (d): \n");
+    printf("Enter the common difference number (d): \n");
     scanf("%d", &d);
     printf("Enter the term number (n): \n");
     scanf("%d", &n);
@@ -20,7 +19,7 @@ int main(){
     return 0; 
 }
 
-//recursive
+//recursive 
 int arithm_sequence1(int a, int d, int n) {
     if (n == 1) {
         return a;
@@ -33,7 +32,7 @@ int arithm_sequence1(int a, int d, int n) {
 int arithm_sequence2(int a, int d, int n){
     int i;
     int term = a; 
-    for (i = 1; i < n; i++) {
+    for (i = 0; i < n-1; i++) {
         term += d; 
     }
     return term;
