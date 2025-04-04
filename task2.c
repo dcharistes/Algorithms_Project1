@@ -28,17 +28,17 @@ int check_prime(int num) {
     return 1; // Prime
 }
 
+//task objective. print the sum of the primes up to n. recursive
 int sum_primes1(int n){
     if (n < 2)
         return 0;
     if (check_prime(n))
-        return n + sum_primes1(n - 1);
-    else {
-        return sum_primes1(n-1);
-    }
+        return n + sum_primes1(n - 1); //in case check_prime(n) is true the number will added to the summation. 
+    else                               //so in case of true this return is added to the stack waiting for sum_primes1(n-1) to compute. 
+        return sum_primes1(n-1);       //when finished all the returns are added producing the sum of all primes [2,n]                                
 }
 
-// task objective. print the sum of the primes in [a,b]. non-recursive
+// task objective. print the sum of the primes up to n. non-recursive
 void sum_primes2(int n) {
     int sum = 0;
     for (int i = 2; i <= n; i++) {
