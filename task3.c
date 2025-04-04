@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include <math.h>
 
 int min_distance(int* arr, int N, int *dmin);
@@ -21,7 +22,7 @@ int main() {
     for (i = 0; i < N; i++)
         scanf("%d", arr+i);
     
-    dmin_value = abs(arr[0]-arr[1]);
+    dmin_value = INT_MAX;
     min_distance(arr, N, &dmin_value);
     printf("dmin = %d\n", dmin_value);
     min_distance_impr(arr, N, &dmin_value);
@@ -42,7 +43,7 @@ int min_distance(int* arr, int N, int* dmin){
     return *dmin;
 }
 
-int min_distance_impr(int* arr, int N, int* dmin){
+int min_distance_opt(int* arr, int N, int* dmin){
     int i, j;
     for (i = 0; i < N; i++){
         for(j = i + 1; j < N; j++){
