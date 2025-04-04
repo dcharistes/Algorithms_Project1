@@ -35,7 +35,7 @@ int min_distance(int* arr, int N, int* dmin){
     int i, j;
     for (i = 0; i < N; i++){
         for(j = 0; j < N; j++){
-            if (i != j && abs(arr[i] - arr[j]) < *dmin)
+            if (i != j && abs(arr[i] - arr[j]) < *dmin) //do not compute the distance if i = j -> avid comparing an element with itself. 
                 *dmin = abs(arr[i] - arr[j]);
         }
     }
@@ -46,7 +46,7 @@ int min_distance_impr(int* arr, int N, int* dmin){
     int i, j;
     for (i = 0; i < N; i++){
         for(j = i + 1; j < N; j++){
-            int current_dmin = abs(arr[i]-arr[j]);
+            int current_dmin = abs(arr[i]-arr[j]); //just cleaner implementation of the min_distance. not an actual improve
             if (current_dmin < *dmin)
                 *dmin = current_dmin;
         }
