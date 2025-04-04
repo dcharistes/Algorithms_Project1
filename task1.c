@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int arithm_sequence1(int a, int d, int n);
 int arithm_sequence2(int a, int d, int n);
