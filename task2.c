@@ -11,7 +11,7 @@ int main() {
     printf("Enter the number: ");
     scanf("%d", &a);
     sum = sum_primes1(a);
-    printf("sum = %d - recursive\n", sum);
+    printf("sum = %d _recursive\n", sum);
     sum_primes2(a);
     return 0;
 }
@@ -47,5 +47,5 @@ void sum_primes2(int n) {
             //printf("%d ", i);
         }
     }
-    printf("sum = %d - non_recursive\n", sum);
+    printf("sum = %d _non_recursive\n", sum);
 }
