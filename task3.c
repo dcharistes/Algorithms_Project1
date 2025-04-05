@@ -10,14 +10,14 @@ void random_num_gen(int* arr, int n);
 double measure_t(int (*func)(int*, int, int*), int* arr, int n, int* dmin);
 int main() {
 
-    FILE *log_file = fopen("log.txt", "w");
+    FILE *log_file = fopen("log.csv", "w");
     if (log_file == NULL) {
         printf("Error opening log file!\n");
         return 1;
     }
 
-    fprintf(log_file, "Size\tNaive Avg Time\tOptimized Avg Time\n");
-    fprintf(log_file, "--------------------------------------------\n");
+    // Write CSV header
+    fprintf(log_file, "Size,Naive_Avg_Time,Optimized_Avg_Time,Min_Distance\n");
 
     srand(time(NULL));  // Αρχικοποίηση seed για τυχαίους αριθμούς
     
@@ -49,8 +49,8 @@ int main() {
         //write to console
         printf("%d\t%.4f\t\t%.4f\t\t\t%d\n", n, naive_total/num_tests, optimized_total/num_tests, dmin_value);
 
-        //write to log file
-        fprintf(log_file, "%d\t%.4f\t\t%.4f\n", n, naive_total/num_tests, optimized_total/num_tests);
+        //write to log.csv file
+        fprintf(log_file, "%d,%.4f,%.4f\n", n, naive_total/num_tests, optimized_total/num_tests);
 
         free(arr);
     }
