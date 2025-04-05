@@ -23,7 +23,7 @@ plt.plot(data['Size'], data['Optimized_Avg_Time'],
 plt.title('Minimum Distance Algorithms - Performance Comparison', fontsize=16, pad=20)
 plt.xlabel('Array Size', fontsize=14)
 plt.ylabel('Avg Execution Time (seconds)', fontsize=14)
-plt.yscale('linear')  # Logarithmic scale to better show the difference
+plt.yscale('log')  # Logarithmic scale to better show the difference
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
 plt.legend(fontsize=12)
