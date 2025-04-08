@@ -17,7 +17,7 @@ int main() {
     }
 
     // Write CSV header
-    fprintf(log_file, "Size,Naive_Avg_Time,Optimized_Avg_Time,Min_Distance\n");
+    fprintf(log_file, "Size,Naive_Avg_Time,Optimized_Avg_Time\n");
 
     srand(time(NULL));  // Αρχικοποίηση seed για τυχαίους αριθμούς
     
