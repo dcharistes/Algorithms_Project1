@@ -3,6 +3,7 @@
 #include <limits.h>
 #include <math.h>
 #include <time.h>
+//#include "mergesort.h"
 
 int min_distance(int* arr, int N, int *dmin);
 int min_distance_opt(int* arr, int N, int *dmin);
@@ -94,6 +95,7 @@ int compare(const void* a, const void* b) {
 //time complexity O(nlogn)
 int min_distance_opt(int* arr, int N, int* dmin){
     int i, j;
+    //mergeSort(arr, 0, N-1);
     qsort(arr, N, sizeof(int), compare); //we can try mergesort to see if we get even better results. theoretical O(nlogn) complx * O(n)
     for (i = 0; i < N - 1; i++){
             int current_dmin = abs(arr[i]-arr[i+1]); //just cleaner implementation of the min_distance. 
