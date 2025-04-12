@@ -28,8 +28,6 @@ int main() {
     int dmin_value = INT_MAX;
     double time = 0;
     
-    printf("Size\tNaive Avg Time\tOptimized Avg Time\n");
-    printf("-------------------------------------------\n");
     
     for (int i = 0; i < num_sizes; i++) {
         int n = sizes[i];
@@ -37,6 +35,14 @@ int main() {
         
         double naive_total = 0.0;
         double optimized_total = 0.0;
+
+        printf("\n\n");
+        printf("------------------------------------------------------------------------------\n");
+        printf("\t\t\t\tSize = %d\n", n);
+        printf("------------------------------------------------------------------------------\n");
+        printf("Min Distance\tNum1\t\tNum2\t\tPosition Num1\tPosition Num2\n");
+        printf("------------------------------------------------------------------------------\n");
+
         for (int j = 0; j < num_tests; j++) {
             for (int i = 0; i < n; i++) {
                 *(arr+i) = rand() % INT_MAX;  // random nums from 0 to 999999999
@@ -50,9 +56,14 @@ int main() {
             optimized_total += measure_t(min_distance_opt, arr, n, &dmin_value);
             dmin_value = INT_MAX;
         }
+
+        printf("------------------------------------------------------------------------------\n");
+        printf("Size\t\t\t\tNaive Avg Time\t\tOptimized Avg Time\n");
+        //printf("------------------------------------------------------------------------------\n");
         
         //write to console
-        printf("%d\t%.4f\t\t%.4f\n", n, naive_total/num_tests, optimized_total/num_tests);
+        printf("%d\t\t\t\t%.4f\t\t\t%.4f\n", n, naive_total/num_tests, optimized_total/num_tests);
+        printf("------------------------------------------------------------------------------\n");
 
         //write to log.csv file
         fprintf(log_file, "%d,%.4f,%.4f\n", n, naive_total/num_tests, optimized_total/num_tests);
@@ -89,7 +100,7 @@ int min_distance(int* arr, int N, int* dmin){
             }
         }
     }
-    printf("dmin = %d, num1 = %d, num2 = %d, i = %d, j = %d\n", *dmin, num1, num2, n1, n2);
+    printf("%d\t\t%d\t%d\t%d\t\t%d\n", *dmin, num1, num2, n1, n2);
     return *dmin;
 }
 
