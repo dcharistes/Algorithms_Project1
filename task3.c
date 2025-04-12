@@ -39,7 +39,7 @@ int main() {
         double optimized_total = 0.0;
         for (int j = 0; j < num_tests; j++) {
             for (int i = 0; i < n; i++) {
-                *(arr+i) = rand() % 1000000000;  // random nums from 0 to 999999999
+                *(arr+i) = rand() % INT_MAX;  // random nums from 0 to 999999999
             }
             
             // time measure for naive algorithm
