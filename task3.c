@@ -39,7 +39,7 @@ int main() {
         double optimized_total = 0.0;
         for (int j = 0; j < num_tests; j++) {
             for (int i = 0; i < n; i++) {
-                *(arr+i) = rand() % 1000000;  // random nums from 0 to 999999
+                *(arr+i) = rand() % 1000000000;  // random nums from 0 to 999999999
             }
             
             // time measure for naive algorithm
@@ -79,8 +79,8 @@ int min_distance(int* arr, int N, int* dmin){
     int n1 = 0, n2 = 0;
     int num1 = 0, num2 = 0;
     for (i = 0; i < N; i++){
-        for(j = 0; j < N; j++){
-            if (i != j && abs(arr[i] - arr[j]) < *dmin){ //do not compute the distance if i = j -> avοid comparing an element with itself. 
+        for(j = i+1; j < N; j++){
+            if (abs(arr[i] - arr[j]) < *dmin){ //do not compute the distance if i = j -> avοid comparing an element with itself. 
                 *dmin = abs(arr[i] - arr[j]);
                 num1 = arr[i];
                 n1 = i;
@@ -89,7 +89,7 @@ int min_distance(int* arr, int N, int* dmin){
             }
         }
     }
-    //printf("dmin = %d, num1 = %d, num2 = %d, i = %d, j = %d\n", *dmin, num1, num2, n1, n2);
+    printf("dmin = %d, num1 = %d, num2 = %d, i = %d, j = %d\n", *dmin, num1, num2, n1, n2);
     return *dmin;
 }
 
