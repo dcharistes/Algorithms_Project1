@@ -23,11 +23,3 @@ The code also includes a function to check whether a number is prime, optimized 
 Finds the minimum distance between any two elements in a randomly generated array:
 - Provides a basic method and an optimized method for finding the minimum distance.
 - Measures and logs the execution time for both methods into a CSV file for performance comparison.
-
-## How to Build and Run
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/dcharistes/Algorithms_Project1.git
-   cd Algorithms_Project1
-   ```
