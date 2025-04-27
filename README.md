@@ -10,7 +10,8 @@ It is developed as part of an academic coursework or personal study on algorithm
 ### Task 1: Arithmetic Sequence Calculation
 Implements two methods to compute the n-th term of an arithmetic sequence:
 - A recursive approach.
-- A non-recursive (iterative) approach. The user inputs the first term, common difference, and the term position.
+- A non-recursive (iterative) approach.
+The user inputs the first term, common difference, and the term position.
 
 ### Task 2: Sum of Prime Numbers
 Calculates the sum of all prime numbers up to a given number n:
