@@ -40,7 +40,7 @@ int main() {
         printf("------------------------------------------------------------------------------\n");
         printf("\t\t\t\tSize = %d\n", n);
         printf("------------------------------------------------------------------------------\n");
-        printf("Min Distance\tNum1\t\tNum2\t\tPosition Num1\tPosition Num2\n");
+        printf("Min Distance\tNum1\tNum2\tPosition Num1\tPosition Num2\n");
         printf("------------------------------------------------------------------------------\n");
 
         for (int j = 0; j < num_tests; j++) {
