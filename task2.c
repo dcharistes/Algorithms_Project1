@@ -3,7 +3,7 @@
 
 int check_prime(int num);
 int sum_primes1(int n);
-void sum_primes2(int n);
+int sum_primes2(int n);
 
 // Main function
 int main() {
@@ -12,7 +12,7 @@ int main() {
     scanf("%d", &a);
     sum = sum_primes1(a);
     printf("sum = %d _recursive\n", sum);
-    sum_primes2(a);
+    printf("sum = %d _non_recursive\n", sum_primes2(a));
     return 0;
 }
 
@@ -39,7 +39,7 @@ int sum_primes1(int n){
 }
 
 // task objective. print the sum of the primes up to n. non-recursive
-void sum_primes2(int n) {
+int sum_primes2(int n) {
     int sum = 0;
     for (int i = 2; i <= n; i++) {
         if (check_prime(i)) {
@@ -47,5 +47,5 @@ void sum_primes2(int n) {
             //printf("%d ", i);
         }
     }
-    printf("sum = %d _non_recursive\n", sum);
+    return sum;
 }
